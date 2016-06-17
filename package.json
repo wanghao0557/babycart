@@ -1,0 +1,16 @@
+{
+  "name": "babycart",
+  "title": "Baby Cart",
+  "description": "This is a e-commerce platform for baby and mami.",
+  "homepage": "http://www.cemingqingshi.pw/ocart2",
+  "author": "opencart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanghao0557/babycart.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
