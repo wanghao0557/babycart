@@ -1,10 +1,10 @@
 <?php
 // Text
-$_['text_success']     = 'Success: You have modified your shopping cart!';
+$_['text_success']     = '成功：您已经修改您的购物车！';
 
 // Error
-$_['error_permission'] = 'Warning: You do not have permission to access the API!';
-$_['error_stock']      = 'Products marked with *** are not available in the desired quantity or not in stock!';
-$_['error_minimum']    = 'Minimum order amount for %s is %s!';
-$_['error_store']      = 'Product can not be bought from the store you have choosen!';
-$_['error_required']   = '%s required!';
+$_['error_permission'] = '警告：您没有权限访问该API！';
+$_['error_stock']            = '商品标有 *** 表示数量不足或没有存货！';
+$_['error_minimum']          = '%s 最小起订量是 %s！';	
+$_['error_store']      = '该商品已不能在本店购买！';
+$_['error_required']   = '%s 必选！';

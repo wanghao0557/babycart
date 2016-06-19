@@ -1,14 +1,14 @@
 <?php
 // Heading
-$_['heading_title'] = 'Use Reward Points (Available %s)';
+$_['heading_title'] = '使用奖励积分（有效积分%s）';
 
 // Text
-$_['text_success']  = 'Success: Your reward points discount has been applied!';
+$_['text_success']  = '成功：您的积分优惠已应用！';
 
 // Entry
-$_['entry_reward']  = 'Points to use (Max %s)';
+$_['entry_reward']  = '奖励积分 (最多可用 %s)';
 
 // Error
-$_['error_reward']  = 'Warning: Please enter the amount of reward points to use!';
-$_['error_points']  = 'Warning: You don\'t have %s reward points!';
-$_['error_maximum'] = 'Warning: The maximum number of points that can be applied is %s!';
+$_['error_reward']  = '警告：请输入奖励积分使用量！';
+$_['error_points']  = '警告：您没有 %s 的积分奖励！';
+$_['error_maximum'] = '警告：你可使用的最大积分数为%s！';
