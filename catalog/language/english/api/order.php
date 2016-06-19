@@ -1,14 +1,14 @@
 <?php
 // Text
-$_['text_success']           = 'Success: You have modified orders!';
+$_['text_success']           = '您的订单已成功修改订单';
 
 // Error
-$_['error_permission']       = 'Warning: You do not have permission to access the API!';
-$_['error_customer']         = 'Customer details needs to be set!';
-$_['error_payment_address']  = 'Payment address required!';
-$_['error_payment_method']   = 'Payment method required!';
-$_['error_shipping_address'] = 'Shipping address required!';
-$_['error_shipping_method']  = 'Shipping method required!';
-$_['error_stock']            = 'Products marked with *** are not available in the desired quantity or not in stock!';
-$_['error_minimum']          = 'Minimum order amount for %s is %s!';
-$_['error_not_found']        = 'Warning: Order could not be found!';
+$_['error_permission']       = '警告：您没有权限访问该API！';
+$_['error_customer']         = '客户的详细信息需要设置！';
+$_['error_payment_address']  = '付款地址必选！';
+$_['error_payment_method']   = '付款方式必选！';
+$_['error_shipping_address'] = '配送地址必选！';
+$_['error_shipping_method']  = '配送方式必选！';
+$_['error_stock']            = '商品标有 *** 表示数量不足或没有存货！';
+$_['error_minimum']          = '%s 最小起订量是 %s！';	
+$_['error_not_found']        = '警告：订购找不到！';

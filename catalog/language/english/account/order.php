@@ -1,37 +1,46 @@
 <?php
-// Heading
-$_['heading_title']         = 'Order History';
+// Heading 
+$_['heading_title']         = '订单记录';
 
 // Text
-$_['text_account']          = 'Account';
-$_['text_order']            = 'Order Information';
-$_['text_order_detail']     = 'Order Details';
-$_['text_invoice_no']       = 'Invoice No.:';
-$_['text_order_id']         = 'Order ID:';
-$_['text_date_added']       = 'Date Added:';
-$_['text_shipping_address'] = 'Shipping Address';
-$_['text_shipping_method']  = 'Shipping Method:';
-$_['text_payment_address']  = 'Payment Address';
-$_['text_payment_method']   = 'Payment Method:';
-$_['text_comment']          = 'Order Comments';
-$_['text_history']          = 'Order History';
-$_['text_success']          = 'Success: You have added <a href="%s">%s</a> to your <a href="%s">shopping cart</a>!';
-$_['text_empty']            = 'You have not made any previous orders!';
-$_['text_error']            = 'The order you requested could not be found!';
+$_['text_account']          = '我的账户';
+$_['text_order']            = '订单信息';
+$_['text_order_detail']     = '订单详细';
+$_['text_invoice_no']       = '发票号：';
+$_['text_order_id']         = '订单号：';
+$_['text_status']           = '状态：';
+$_['text_date_added']       = '订单日期：';
+$_['text_customer']         = '会员：';
+$_['text_shipping_address'] = '配送地址';
+$_['text_shipping_method']  = '配送方式：';
+$_['text_payment_address']  = '付款地址';
+$_['text_payment_method']   = '付款方式：';
+$_['text_products']         = '商品：';
+$_['text_total']            = '合计：';
+$_['text_comment']          = '订单备注';
+$_['text_history']          = '订单记录';
+$_['text_success']          = '您已经添加商品<a href="%s">%s</a>到您的<a href="%s">购物车</a>！';
+$_['text_empty']            = '您还没有订购过本店商品！';
+$_['text_error']            = '找不到相关订单！';
+$_['text_action']           = '选择操作：';
+$_['text_selected']         = '请选择您想要操作的选项';
+$_['text_reorder']          = '加入购物车';
+$_['text_return']           = '退换产品';
 
 // Column
-$_['column_order_id']       = 'Order ID';
-$_['column_product']        = 'No. of Products';
-$_['column_customer']       = 'Customer';
-$_['column_name']           = 'Product Name';
-$_['column_model']          = 'Model';
-$_['column_quantity']       = 'Quantity';
-$_['column_price']          = 'Price';
-$_['column_total']          = 'Total';
-$_['column_action']         = 'Action';
-$_['column_date_added']     = 'Date Added';
-$_['column_status']         = 'Order Status';
-$_['column_comment']        = 'Comment';
+$_['column_order_id']       = '订单号';
+$_['column_product']        = '商品数量';
+$_['column_customer']       = '客户';
+$_['column_name']           = '品名';
+$_['column_model']          = '型号';
+$_['column_quantity']       = '数量';
+$_['column_price']          = '价格';
+$_['column_total']          = '合计';
+$_['column_action']         = '管理';
+$_['column_date_added']     = '订单日期';
+$_['column_status']         = '状态';
+$_['column_comment']        = '备注';
 
 // Error
-$_['error_reorder']         = '%s is not currently available to be reordered.';
+$_['error_reorder']         = '%s 当前不可被重复下单。';
+$_['error_warning']         = '请选择商品及处理方式来完成操作！';

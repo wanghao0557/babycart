@@ -1,18 +1,18 @@
 <?php
 // Text
-$_['text_address']       = 'Success: Shipping address has been set!';
-$_['text_method']        = 'Success: Shipping method has been set!';
+$_['text_address']       = '成功：配送地址已设置！';
+$_['text_method']        = '成功：配送方式已设置！';
 
 // Error
-$_['error_permission']   = 'Warning: You do not have permission to access the API!';
-$_['error_firstname']    = 'First Name must be between 1 and 32 characters!';
-$_['error_lastname']     = 'Last Name must be between 1 and 32 characters!';
-$_['error_address_1']    = 'Address 1 must be between 3 and 128 characters!';
-$_['error_city']         = 'City must be between 3 and 128 characters!';
-$_['error_postcode']     = 'Postcode must be between 2 and 10 characters for this country!';
-$_['error_country']      = 'Please select a country!';
-$_['error_zone']         = 'Please select a region / state!';
-$_['error_custom_field'] = '%s required!';
-$_['error_address']      = 'Warning: Shipping address required!';
-$_['error_method']       = 'Warning: Shipping method required!';
-$_['error_no_shipping']  = 'Warning: No Shipping options are available!';
+$_['error_permission']   = '警告：您没有权限访问该 API！';
+$_['error_firstname']    = '名字必须在 1 至 32 个字符之间！';
+$_['error_lastname']     = '姓氏必须在 1 至 32 个字符之间！';
+$_['error_address_1']    = '地址1必须是 3 至 128 字符之间！';
+$_['error_city']         = '城市必须是 3 至 128 字符之间！';
+$_['error_postcode']     = '邮政编码必须是 2 至 10 个字符！';
+$_['error_country']      = '请选择一个国家！';
+$_['error_zone']         = '请选择一个地区/省份！';
+$_['error_custom_field'] = '%s 必填！';
+$_['error_address']      = '警告：需要配送地址！';
+$_['error_method']       = '警告：配送方式需要！';
+$_['error_no_shipping']  = '警告：没有配送选项！';
