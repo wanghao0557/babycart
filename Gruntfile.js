@@ -28,8 +28,20 @@ module.exports=function(grunt){
 		watch: {
 			files: ['catalog/view/javascript/self/*.js'],
 			tasks: ['jshint']
+		},
+		sass: {
+			dist: {
+				options: {
+					style: 'compressed',
+					sourcemap: 'inline'
+				},
+				files: {
+					'catalog/view/theme/default/stylesheet/<%= pkg.name %>.min.css' : 'catalog/view/scss/babycart.scss'
+				}
+			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 };
