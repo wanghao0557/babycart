@@ -68,28 +68,8 @@ div.required .control-label:before {
 }
 /* top */
 /* logo */
-#logo {
-	margin: 0 0 10px 0;
-}
 /* search */
-#search {
-	margin-bottom: 10px;
-}
-#search .input-lg {
-	height: 40px;
-	line-height: 20px;
-	padding: 0 10px;
-}
-#search .btn-lg {
-	font-size: 15px;
-	line-height: 18px;
-	padding: 10px 35px;
-	text-shadow: 0 1px 0 #FFF;
-}
 /* cart */
-#cart {
-	margin-bottom: 10px;
-}
 #cart > .btn {
 	font-size: 12px;
 	line-height: 18px;

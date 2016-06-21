@@ -1,12 +1,17 @@
 //import variables
 @import '../bootstrap/variables';
 @import '../bootstrap/mixins/vendor-prefixes';
+@import '../bootstrap/mixins/gradients';
 @import 'variables';
 body{
 	width: 100%;
 }
 ul{
 	margin-bottom: 0;
+}
+.btn{
+	border-radius: 0;
+	@include box-shadow(none);
 }
 #top{
 	background-color: $bblack;
@@ -46,7 +51,7 @@ ul{
 		.dropdown-menu{
 			margin: 0;
 			font-size: $font-size-small;
-			@include box-shadow(0 0 0 rgba(0, 0, 0, 0));
+			@include box-shadow(none);
 			border: none;
 			border-radius: 0;
 			min-width: 120px;
@@ -62,5 +67,31 @@ ul{
 				text-align: center;
 			}
 		}
+	}
+}
+header{
+	margin-bottom: 20px;
+}
+.search-box{
+	.input-lg{
+		border-radius: 0;
+		@include box-shadow(none);
+	}
+	.form-control{
+		height: 40px;
+		border-width: 2px 0 2px 2px;
+		border-style: solid;
+		border-color: $bred;
+	}
+	.btn{
+		@include gradient-vertical($bred, $bred);
+		color: $bwhite;
+		border: none;
+		text-shadow: none;
+		height: 40px;
+
+	}
+	.fa{
+		color: $bwhite;
 	}
 }
