@@ -1,12 +1,23 @@
 //import variables
 @import '../bootstrap/variables';
 @import '../bootstrap/mixins/vendor-prefixes';
+@import '../bootstrap/mixins/gradients';
 @import 'variables';
 body{
 	width: 100%;
 }
 ul{
 	margin-bottom: 0;
+}
+a{
+	color: $font-color-base;
+	&:hover{
+		color: $bred;
+	}
+}
+.btn{
+	border-radius: 0;
+	@include box-shadow(none);
 }
 #top{
 	background-color: $bblack;
@@ -46,7 +57,7 @@ ul{
 		.dropdown-menu{
 			margin: 0;
 			font-size: $font-size-small;
-			@include box-shadow(0 0 0 rgba(0, 0, 0, 0));
+			@include box-shadow(none);
 			border: none;
 			border-radius: 0;
 			min-width: 120px;
@@ -61,6 +72,70 @@ ul{
 			&.text-meta{
 				text-align: center;
 			}
+		}
+	}
+}
+header{
+	margin-bottom: 20px;
+}
+.search-box{
+	.input-lg{
+		border-radius: 0;
+		@include box-shadow(none);
+	}
+	.form-control{
+		height: 40px;
+		border-width: 2px 0 2px 2px;
+		border-style: solid;
+		border-color: $bred;
+	}
+	.btn{
+		@include gradient-vertical($bred, $bred);
+		color: $bwhite;
+		border: none;
+		text-shadow: none;
+		height: 40px;
+
+	}
+	.fa{
+		color: $bwhite;
+	}
+}
+.bcart{
+	position: relative;
+	.btn-lg{
+		font-size: $font-size-small;
+		border-color: #dfdfdf;
+		height: 40px;
+		@include box-shadow(none);
+		background-color: #f9f9f9;
+		color: $font-color-base;
+		.fa{
+			margin-right: 5px;
+		}
+		&:focus{
+			border-color: #dfdfdf;
+			@include box-shadow(none);
+		}
+	}
+	.dropdown-menu{
+		margin: 0;
+		font-size: $font-size-small;
+		@include box-shadow(none);
+		border-color: #dfdfdf;
+		border-radius: 0;
+		right: 0;
+		min-width: 350px;
+		left: auto;
+	}
+	&.open{
+		.btn-lg{
+			border-bottom: 0;
+		}
+		.dropdown-menu{
+			background-color: $bwhite;
+			padding-top: 10px;
+			z-index: 1000;
 		}
 	}
 }
