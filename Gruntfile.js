@@ -26,17 +26,20 @@ module.exports=function(grunt){
 			}
 		},
 		watch: {
-			files: ['catalog/view/javascript/self/*.js'],
-			tasks: ['jshint']
+			//files: ['catalog/view/javascript/self/*.js'],
+			//tasks: ['jshint']
+			files: ['catalog/view/scss/self/*.scss'],
+			tasks: ['sass']
 		},
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed',
-					sourcemap: 'inline'
+					style: 'nested',
+					sourcemap: 'none'
 				},
 				files: {
-					'catalog/view/theme/default/stylesheet/<%= pkg.name %>.min.css' : 'catalog/view/scss/babycart.scss'
+					//'catalog/view/theme/default/stylesheet/bootstrap.min.css' : 'catalog/view/scss/bootstrap/bootstrap.scss',
+					'catalog/view/theme/default/stylesheet/<%= pkg.name %>.min.css' : 'catalog/view/scss/self/babycart.scss'
 				}
 			}
 		}
