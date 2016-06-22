@@ -128,7 +128,7 @@
   </div>
 </header>
 <?php if ($categories) { ?>
-  <nav id="bnavbar" class="bnavbar">
+  <nav id="bnavbar" class="bnavbar devider20-mb">
     <div class="container">
       <div class="navbar">
         <ul class="nav navbar-nav">
