@@ -109,7 +109,7 @@
     </ul>
   </div>
 </div>
-<header>
+<header id="babycart-header">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
