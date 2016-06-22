@@ -2,6 +2,7 @@
 @import '../bootstrap/variables';
 @import '../bootstrap/mixins/vendor-prefixes';
 @import '../bootstrap/mixins/gradients';
+@import '../bootstrap/mixins/text-overflow';
 @import 'variables';
 body{
 	width: 100%;
@@ -15,9 +16,16 @@ a{
 		color: $bred;
 	}
 }
+h2{
+	font-size: 20px;
+	font-weight: bold;
+}
 .btn{
 	border-radius: 0;
 	@include box-shadow(none);
+}
+.devider20-mb{
+	margin-bottom: 20px;
 }
 #top{
 	background-color: $bblack;
@@ -75,7 +83,7 @@ a{
 		}
 	}
 }
-header{
+#babycart-header{
 	margin-bottom: 20px;
 }
 .search-box{
@@ -139,6 +147,115 @@ header{
 		}
 	}
 }
+.bnavbar{
+	.navbar{
+		margin-bottom: 0;
+		border-radius: 0;
+		border: none;
+	}
+	.navbar-nav{
+		>li{
+			position: static;
+			>a{
+				color: $bwhite;
+				border-top: 1px solid $bred;
+			}
+			&:hover{
+				background-color: #fff;
+				>a{
+					background-color: #fff;
+					color: $bred;
+				}
+				.dropdown-menu{
+					display: block;
+				}
+			}
+		}
+	}
+	.dropdown-menu{
+		margin: 0;
+		font-size: $font-size-small;
+		@include box-shadow(none);
+		border-radius: 0;
+		min-width: 100%;
+		padding: 20px 0;
+		text-align: center;
+		border-color: $bred;
+		border-top-color: #fff;
+		font-size: $font-size-base;
+	}
+}
+.bnavbar{
+	background-color: $bred;
+}
 footer{
 	background-color: $bblack;
+}
+
+.babycart-group{
+	.product-list{
+		.blist-header{
+			position: absolute;
+			left: 0;
+		}
+		.blist-body{
+			margin-left: 258px;
+			margin-top: 90px;
+			text-align: left;
+		}
+	}
+	.bgroup-body{
+		padding-top: 10px;
+		border-top: 1px solid #ededed;
+	}
+	.bgroup-lists{
+		list-style: none;
+		li{
+			border-left: 1px solid #f4f4f4;
+			margin-bottom: 20px;
+			&:first-child{
+				border-left: 0;
+			}
+			&:hover{
+				img{
+					@include scale(1.05);
+				}
+			}
+		}
+	}
+	.blist-header{
+		background-color: #fff;
+		img{
+			margin: 0 auto;
+			@include transition(1s ease 0s);
+		}
+	}
+	.blist-body{
+		text-align: center;
+		h3{
+			font-size: 16px;
+			@include text-overflow();
+		}
+		.price{
+			color: $bred;
+		}
+	}
+	.btn-group{
+		.btn{
+			color: #999;
+			&:hover{
+				background-color: #f4f4f4;
+			}
+		}
+		.btn.add-cart{
+			color: $bred;
+		}
+		.btn-notext{
+			&:hover{
+				.fa{
+					color: $bred;
+				}
+			}
+		}
+	}
 }
