@@ -2,6 +2,7 @@
 @import '../bootstrap/variables';
 @import '../bootstrap/mixins/vendor-prefixes';
 @import '../bootstrap/mixins/gradients';
+@import '../bootstrap/mixins/text-overflow';
 @import 'variables';
 body{
 	width: 100%;
@@ -219,6 +220,10 @@ footer{
 	}
 	.blist-body{
 		text-align: center;
+		h3{
+			font-size: 16px;
+			@include text-overflow();
+		}
 		.price{
 			color: $bred;
 		}

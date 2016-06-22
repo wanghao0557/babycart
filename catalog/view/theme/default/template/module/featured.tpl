@@ -13,7 +13,7 @@
           </div>
           <div class="blist-body">
             <h3>
-              <a href="<?php echo $product['href']; ?>"><?php  echo $product['name']; ?></a>
+              <a href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>"><?php  echo $product['name']; ?></a>
             </h3>
             <?php if($product['price']) { ?>
               <p class="price">

@@ -109,7 +109,7 @@
     </ul>
   </div>
 </div>
-<header id="babycart-header">
+<header id="babycart-header" class="devider20-mb">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
