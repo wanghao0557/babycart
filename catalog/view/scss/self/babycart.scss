@@ -193,6 +193,17 @@ footer{
 }
 
 .babycart-group{
+	.product-list{
+		.blist-header{
+			position: absolute;
+			left: 0;
+		}
+		.blist-body{
+			margin-left: 258px;
+			margin-top: 90px;
+			text-align: left;
+		}
+	}
 	.bgroup-body{
 		padding-top: 10px;
 		border-top: 1px solid #ededed;
@@ -201,6 +212,7 @@ footer{
 		list-style: none;
 		li{
 			border-left: 1px solid #f4f4f4;
+			margin-bottom: 20px;
 			&:first-child{
 				border-left: 0;
 			}
