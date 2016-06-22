@@ -129,25 +129,27 @@
 </header>
 <?php if ($categories) { ?>
   <nav id="bnavbar" class="bnavbar">
-    <div class="container navbar">
-      <ul class="nav navbar-nav">
-        <?php foreach($categories as $category) { ?>
-          <?php if($category['children']) { ?>
-            <li>
-              <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
-              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) {?>
-                <ul class=" dropdown-menu list-inline">
-                  <?php foreach($children as $child) { ?>
-                    <li>
-                      <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
-                    </li>
-                  <?php } ?>  
-                </ul>
-              <?php } ?>  
-            </li>
+    <div class="container">
+      <div class="navbar">
+        <ul class="nav navbar-nav">
+          <?php foreach($categories as $category) { ?>
+            <?php if($category['children']) { ?>
+              <li>
+                <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) {?>
+                  <ul class=" dropdown-menu list-inline">
+                    <?php foreach($children as $child) { ?>
+                      <li>
+                        <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
+                      </li>
+                    <?php } ?>  
+                  </ul>
+                <?php } ?>  
+              </li>
+            <?php } ?>
           <?php } ?>
-        <?php } ?>
-      </ul>
+        </ul>
+      </div>
     </div>
   </nav>
 <?php } ?>

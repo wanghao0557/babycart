@@ -140,19 +140,22 @@ header{
 	}
 }
 .bnavbar{
+	.navbar{
+		margin-bottom: 0;
+		border-radius: 0;
+		border: none;
+	}
 	.navbar-nav{
 		>li{
 			position: static;
 			>a{
 				color: $bwhite;
-				&:hover{
-					color: $bred;
-					background-color: #fff;
-				}
+				border-top: 1px solid $bred;
 			}
 			&:hover{
 				background-color: #fff;
 				>a{
+					background-color: #fff;
 					color: $bred;
 				}
 				.dropdown-menu{
