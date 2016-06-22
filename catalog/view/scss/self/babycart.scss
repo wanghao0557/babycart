@@ -23,6 +23,9 @@ h2{
 	border-radius: 0;
 	@include box-shadow(none);
 }
+.devider20-mb{
+	margin-bottom: 20px;
+}
 #top{
 	background-color: $bblack;
 	min-height: 36px;
@@ -186,4 +189,56 @@ h2{
 }
 footer{
 	background-color: $bblack;
+}
+
+.babycart-group{
+	.bgroup-body{
+		padding-top: 10px;
+		border-top: 1px solid #ededed;
+	}
+	.bgroup-lists{
+		list-style: none;
+		li{
+			border-left: 1px solid #f4f4f4;
+			&:first-child{
+				border-left: 0;
+			}
+			&:hover{
+				img{
+					@include scale(1.05);
+				}
+			}
+		}
+	}
+	.blist-header{
+		background-color: #fff;
+		img{
+			margin: 0 auto;
+			@include transition(1s ease 0s);
+		}
+	}
+	.blist-body{
+		text-align: center;
+		.price{
+			color: $bred;
+		}
+	}
+	.btn-group{
+		.btn{
+			color: #999;
+			&:hover{
+				background-color: #f4f4f4;
+			}
+		}
+		.btn.add-cart{
+			color: $bred;
+		}
+		.btn-notext{
+			&:hover{
+				.fa{
+					color: $bred;
+				}
+			}
+		}
+	}
 }
