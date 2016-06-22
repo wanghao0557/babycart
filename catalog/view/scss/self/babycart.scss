@@ -139,6 +139,44 @@ header{
 		}
 	}
 }
+.bnavbar{
+	.navbar-nav{
+		>li{
+			position: static;
+			>a{
+				color: $bwhite;
+				&:hover{
+					color: $bred;
+					background-color: #fff;
+				}
+			}
+			&:hover{
+				background-color: #fff;
+				>a{
+					color: $bred;
+				}
+				.dropdown-menu{
+					display: block;
+				}
+			}
+		}
+	}
+	.dropdown-menu{
+		margin: 0;
+		font-size: $font-size-small;
+		@include box-shadow(none);
+		border-radius: 0;
+		min-width: 100%;
+		padding: 20px 0;
+		text-align: center;
+		border-color: $bred;
+		border-top-color: #fff;
+		font-size: $font-size-base;
+	}
+}
+.bnavbar{
+	background-color: $bred;
+}
 footer{
 	background-color: $bblack;
 }
