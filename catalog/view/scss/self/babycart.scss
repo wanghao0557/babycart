@@ -5,291 +5,291 @@
 @import '../bootstrap/mixins/text-overflow';
 @import 'variables';
 body{
-	width: 100%;
+  width: 100%;
 }
 ul{
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 a{
-	color: $font-color-base;
-	&:hover{
-		color: $bred;
-	}
+  color: $font-color-base;
+  &:hover{
+    color: $bred;
+  }
 }
 h2{
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 .btn{
-	border-radius: 0;
-	@include box-shadow(none);
+  border-radius: 0;
+  @include box-shadow(none);
 }
 .devider20-mb{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 #top{
-	background-color: $bblack;
-	min-height: 36px;
-	color: $bwhite;
-	font-size: $font-size-small;
-	line-height: 36px;
-	margin-bottom: 20px;
-	li.toggle-link{
-		&:hover{
-			background-color: $bred;
-			.fa{
-				color: $bwhite;
-			}
-		}
-		>a{
-			color: $bwhite;
-			padding: 11px 5px;
-			&:hover, &:focus{
-				text-decoration: none;
-			}
-		}
-	}
-	.fa{
-		font-size: 14px;
-		color: $bred;
-		vertical-align: middle;
-	}
-	.top-dropdown{
-		position: relative;
-		&:hover{
-			.dropdown-menu{
-				display:block;
-				background-color: $bred;
-			}
-		}
-		.dropdown-menu{
-			margin: 0;
-			font-size: $font-size-small;
-			@include box-shadow(none);
-			border: none;
-			border-radius: 0;
-			min-width: 120px;
-			padding-left: 5px;
-			padding-right: 5px;
-			a{
-				color: $bwhite;
-				&:hover{
-					text-decoration: underline;
-				}
-			}
-			&.text-meta{
-				text-align: center;
-			}
-		}
-	}
+  background-color: $bblack;
+  min-height: 36px;
+  color: $bwhite;
+  font-size: $font-size-small;
+  line-height: 36px;
+  margin-bottom: 20px;
+  li.toggle-link{
+    &:hover{
+      background-color: $bred;
+      .fa{
+        color: $bwhite;
+      }
+    }
+    >a{
+      color: $bwhite;
+      padding: 11px 5px;
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+  .fa{
+    font-size: 14px;
+    color: $bred;
+    vertical-align: middle;
+  }
+  .top-dropdown{
+    position: relative;
+    &:hover{
+      .dropdown-menu{
+        display:block;
+        background-color: $bred;
+      }
+    }
+    .dropdown-menu{
+      margin: 0;
+      font-size: $font-size-small;
+      @include box-shadow(none);
+      border: none;
+      border-radius: 0;
+      min-width: 120px;
+      padding-left: 5px;
+      padding-right: 5px;
+      a{
+        color: $bwhite;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &.text-meta{
+        text-align: center;
+      }
+    }
+  }
 }
 #babycart-header{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .search-box{
-	.input-lg{
-		border-radius: 0;
-		@include box-shadow(none);
-	}
-	.form-control{
-		height: 40px;
-		border-width: 2px 0 2px 2px;
-		border-style: solid;
-		border-color: $bred;
-	}
-	.btn{
-		@include gradient-vertical($bred, $bred);
-		color: $bwhite;
-		border: none;
-		text-shadow: none;
-		height: 40px;
+  .input-lg{
+    border-radius: 0;
+    @include box-shadow(none);
+  }
+  .form-control{
+    height: 40px;
+    border-width: 2px 0 2px 2px;
+    border-style: solid;
+    border-color: $bred;
+  }
+  .btn{
+    @include gradient-vertical($bred, $bred);
+    color: $bwhite;
+    border: none;
+    text-shadow: none;
+    height: 40px;
 
-	}
-	.fa{
-		color: $bwhite;
-	}
+  }
+  .fa{
+    color: $bwhite;
+  }
 }
 .bcart{
-	position: relative;
-	.btn-lg{
-		font-size: $font-size-small;
-		border-color: #dfdfdf;
-		height: 40px;
-		@include box-shadow(none);
-		background-color: #f9f9f9;
-		color: $font-color-base;
-		.fa{
-			margin-right: 5px;
-		}
-		&:focus{
-			border-color: #dfdfdf;
-			@include box-shadow(none);
-		}
-	}
-	.dropdown-menu{
-		margin: 0;
-		font-size: $font-size-small;
-		@include box-shadow(none);
-		border-color: #dfdfdf;
-		border-radius: 0;
-		right: 0;
-		min-width: 350px;
-		left: auto;
-	}
-	&.open{
-		.btn-lg{
-			border-bottom: 0;
-		}
-		.dropdown-menu{
-			background-color: $bwhite;
-			padding-top: 10px;
-			z-index: 1000;
-		}
-	}
+  position: relative;
+  .btn-lg{
+    font-size: $font-size-small;
+    border-color: #dfdfdf;
+    height: 40px;
+    @include box-shadow(none);
+    background-color: #f9f9f9;
+    color: $font-color-base;
+    .fa{
+      margin-right: 5px;
+    }
+    &:focus{
+      border-color: #dfdfdf;
+      @include box-shadow(none);
+    }
+  }
+  .dropdown-menu{
+    margin: 0;
+    font-size: $font-size-small;
+    @include box-shadow(none);
+    border-color: #dfdfdf;
+    border-radius: 0;
+    right: 0;
+    min-width: 350px;
+    left: auto;
+  }
+  &.open{
+    .btn-lg{
+      border-bottom: 0;
+    }
+    .dropdown-menu{
+      background-color: $bwhite;
+      padding-top: 10px;
+      z-index: 1000;
+    }
+  }
 }
 .bnavbar{
-	.navbar{
-		margin-bottom: 0;
-		border-radius: 0;
-		border: none;
-	}
-	.navbar-nav{
-		>li{
-			position: static;
-			>a{
-				color: $bwhite;
-				border-top: 1px solid $bred;
-			}
-			&:hover{
-				background-color: #fff;
-				>a{
-					background-color: #fff;
-					color: $bred;
-				}
-				.dropdown-menu{
-					display: block;
-				}
-			}
-		}
-	}
-	.dropdown-menu{
-		margin: 0;
-		font-size: $font-size-small;
-		@include box-shadow(none);
-		border-radius: 0;
-		min-width: 100%;
-		padding: 20px 0;
-		text-align: center;
-		border-color: $bred;
-		border-top-color: #fff;
-		font-size: $font-size-base;
-	}
+  .navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+  }
+  .navbar-nav{
+    >li{
+      position: static;
+      >a{
+        color: $bwhite;
+        border-top: 1px solid $bred;
+      }
+      &:hover{
+        background-color: #fff;
+        >a{
+          background-color: #fff;
+          color: $bred;
+        }
+        .dropdown-menu{
+          display: block;
+        }
+      }
+    }
+  }
+  .dropdown-menu{
+    margin: 0;
+    font-size: $font-size-small;
+    @include box-shadow(none);
+    border-radius: 0;
+    min-width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    border-color: $bred;
+    border-top-color: #fff;
+    font-size: $font-size-base;
+  }
 }
 .bnavbar{
-	background-color: $bred;
+  background-color: $bred;
 }
 footer{
-	background-color: $bblack;
+  background-color: $bblack;
 }
 
 .babycart-group{
-	.product-list{
-		.blist-header{
-			position: absolute;
-			left: 0;
-		}
-		.blist-body{
-			margin-left: 258px;
-			margin-top: 90px;
-			text-align: left;
-		}
-	}
-	.bgroup-body{
-		padding-top: 10px;
-		border-top: 1px solid #ededed;
-	}
-	.bgroup-lists{
-		list-style: none;
-		li{
-			border-left: 1px solid #f4f4f4;
-			margin-bottom: 20px;
-			&:first-child{
-				border-left: 0;
-			}
-			&:hover{
-				img{
-					@include scale(1.05);
-				}
-			}
-		}
-	}
-	.blist-header{
-		background-color: #fff;
-		img{
-			margin: 0 auto;
-			@include transition(1s ease 0s);
-		}
-	}
-	.blist-body{
-		text-align: center;
-		h3{
-			font-size: 16px;
-			@include text-overflow();
-		}
-		.price{
-			color: $bred;
-		}
-	}
-	.btn-group{
-		.btn{
-			color: #999;
-			&:hover{
-				background-color: #f4f4f4;
-			}
-		}
-		.btn.add-cart{
-			color: $bred;
-		}
-		.btn-notext{
-			&:hover{
-				.fa{
-					color: $bred;
-				}
-			}
-		}
-	}
+  .product-list{
+    .blist-header{
+      position: absolute;
+      left: 0;
+    }
+    .blist-body{
+      margin-left: 258px;
+      margin-top: 90px;
+      text-align: left;
+    }
+  }
+  .bgroup-body{
+    padding-top: 10px;
+    border-top: 1px solid #ededed;
+  }
+  .bgroup-lists{
+    list-style: none;
+    li{
+      border-left: 1px solid #f4f4f4;
+      margin-bottom: 20px;
+      &:first-child{
+        border-left: 0;
+      }
+      &:hover{
+        img{
+          @include scale(1.05);
+        }
+      }
+    }
+  }
+  .blist-header{
+    background-color: #fff;
+    img{
+      margin: 0 auto;
+      @include transition(1s ease 0s);
+    }
+  }
+  .blist-body{
+    text-align: center;
+    h3{
+      font-size: 16px;
+      @include text-overflow();
+    }
+    .price{
+      color: $bred;
+    }
+  }
+  .btn-group{
+    .btn{
+      color: #999;
+      &:hover{
+        background-color: #f4f4f4;
+      }
+    }
+    .btn.add-cart{
+      color: $bred;
+    }
+    .btn-notext{
+      &:hover{
+        .fa{
+          color: $bred;
+        }
+      }
+    }
+  }
 }
 .breadcrumb{
-	border: 1px solid #eee;
-	margin: 0 0 20px 0;
-	border-radius: 0;
-	background-color: #fff;
-	.fa{
-	  font-size: 16px;
-	}
-	>li{
-	  padding: 0 10px;
-	  position: relative;
-	  &+li:before{
-	    content: '';
-	    padding: 0;
-	  }
-	  &:after{
-	    content: "";
-	    display: block;
-	    position: absolute;
-	    width: 8px;
-	    height: 8px;
-	    border-right: 1px solid #bbb;
-	    border-bottom: 1px solid #bbb;
-	    @include rotate(-45deg);
-	    top: 4px;
-	    right: -4px;
-	  }
-	  &:last-child{
-	    &:after{
-	      display: none;
-	    }
-	  }
-	}
+  border: 1px solid #eee;
+  margin: 0 0 20px 0;
+  border-radius: 0;
+  background-color: #fff;
+  .fa{
+    font-size: 16px;
+  }
+  >li{
+    padding: 0 10px;
+    position: relative;
+    &+li:before{
+      content: '';
+      padding: 0;
+    }
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
+      @include rotate(-45deg);
+      top: 4px;
+      right: -4px;
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+  }
 }
