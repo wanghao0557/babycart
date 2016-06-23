@@ -259,3 +259,37 @@ footer{
 		}
 	}
 }
+.breadcrumb{
+	border: 1px solid #eee;
+	margin: 0 0 20px 0;
+	border-radius: 0;
+	background-color: #fff;
+	.fa{
+	  font-size: 16px;
+	}
+	>li{
+	  padding: 0 10px;
+	  position: relative;
+	  &+li:before{
+	    content: '';
+	    padding: 0;
+	  }
+	  &:after{
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    width: 8px;
+	    height: 8px;
+	    border-right: 1px solid #bbb;
+	    border-bottom: 1px solid #bbb;
+	    @include rotate(-45deg);
+	    top: 4px;
+	    right: -4px;
+	  }
+	  &:last-child{
+	    &:after{
+	      display: none;
+	    }
+	  }
+	}
+}
