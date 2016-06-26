@@ -409,3 +409,16 @@ legend{
   background-repeat: repeat-x;
   border-color: $bred;
 }
+
+.nav-tabs{
+  >li{
+    >a{
+      border-radius: 0;
+      &:hover{
+        background-color: #fff;
+        border: none;
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
