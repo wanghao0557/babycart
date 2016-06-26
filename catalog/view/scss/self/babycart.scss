@@ -372,3 +372,40 @@ footer{
     text-shadow: 0 1px 0px #dfdfdf;
   }
 }
+
+legend{
+ padding: 7px 0;
+  >span{
+    border-bottom: 2px solid $bred;
+    padding: 8px 0;
+  }
+}
+.form-control{
+  border-radius: 0;
+}
+.bform-aside{
+  padding: 41px 0;
+  .bform-aside-inner{
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    p{
+      line-height: 26px;
+    }
+  }
+}
+.btn-primary {
+  color: $bwhite;
+  text-shadow: none;
+  background-color: $bred;
+  background-image: none;
+  background-repeat: repeat-x;
+  border-color: $bred;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], .btn-primary:focus {
+  color: $bwhite;
+  text-shadow: none;
+  background-color: $bred;
+  background-image: none;
+  background-repeat: repeat-x;
+  border-color: $bred;
+}

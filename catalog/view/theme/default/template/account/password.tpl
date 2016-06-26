@@ -14,13 +14,13 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
+      <h1 class="hide"><?php echo $heading_title; ?></h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
-          <legend><?php echo $text_password; ?></legend>
+          <legend><span><?php echo $text_password; ?></span></legend>
           <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-password"><?php echo $entry_password; ?></label>
-            <div class="col-sm-10">
+            <label class="col-sm-4 control-label" for="input-password"><?php echo $entry_password; ?></label>
+            <div class="col-sm-5">
               <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
               <?php if ($error_password) { ?>
               <div class="text-danger"><?php echo $error_password; ?></div>
@@ -28,8 +28,8 @@
             </div>
           </div>
           <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
-            <div class="col-sm-10">
+            <label class="col-sm-4 control-label" for="input-confirm"><?php echo $entry_confirm; ?></label>
+            <div class="col-sm-5">
               <input type="password" name="confirm" value="<?php echo $confirm; ?>" placeholder="<?php echo $entry_confirm; ?>" id="input-confirm" class="form-control" />
               <?php if ($error_confirm) { ?>
               <div class="text-danger"><?php echo $error_confirm; ?></div>
@@ -37,10 +37,9 @@
             </div>
           </div>
         </fieldset>
-        <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-          <div class="pull-right">
-            <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-5">
+            <input type="submit" value="确认修改" class="btn btn-lg btn-primary" />
           </div>
         </div>
       </form>
