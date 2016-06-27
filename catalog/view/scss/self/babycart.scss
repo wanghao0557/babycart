@@ -193,17 +193,6 @@ footer{
 }
 
 .babycart-group{
-  .product-list{
-    .blist-header{
-      position: absolute;
-      left: 0;
-    }
-    .blist-body{
-      margin-left: 258px;
-      margin-top: 90px;
-      text-align: left;
-    }
-  }
   .bgroup-body{
     padding-top: 10px;
     border-top: 1px solid #ededed;
@@ -238,6 +227,24 @@ footer{
     }
     .price{
       color: $bred;
+    }
+  }
+  .bgroup-lists{
+    .product-list{
+      border-left: none;
+      border-bottom: 1px solid #f4f4f4;
+      .blist-header{
+        position: absolute;
+        left: 0;
+      }
+      .blist-body{
+        margin-left: 258px;
+        min-height: 258px;
+        text-align: left;
+      }
+      .view-for-list{
+        display: block;
+      }
     }
   }
 }
@@ -436,5 +443,30 @@ legend{
         border-color: $bred;
       }
     }
+  }
+}
+
+.view-for-list{
+  display: none;
+}
+.bcategory-lists{
+  >li{
+    padding: 5px 8px;
+  }
+}
+.bcategory-toolbar{
+  border-top: 1px solid #ddd;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.babycart-left-product{
+  li:nth-of-type(3n+1){
+    border-left: none;
+  }
+}
+.babycart-full-product{
+  li:nth-of-type(4n+1){
+    border-left: none;
   }
 }

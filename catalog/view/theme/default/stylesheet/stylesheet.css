@@ -84,7 +84,7 @@ footer h5 {
 	padding: 10px 16px;
 	font-size: 15px;
 }
-.btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover {
+.btn-group > .dropdown-menu, .btn-group > .popover {
 	font-size: 12px;
 }
 .btn-group > .btn-xs {
