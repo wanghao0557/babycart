@@ -240,21 +240,22 @@ footer{
       color: $bred;
     }
   }
-  .btn-group{
-    .btn{
-      color: #999;
-      &:hover{
-        background-color: #f4f4f4;
-      }
+}
+
+.btn-group{
+  .btn{
+    color: #999;
+    &:hover{
+      background-color: #f4f4f4;
     }
-    .btn.add-cart{
-      color: $bred;
-    }
-    .btn-notext{
-      &:hover{
-        .fa{
-          color: $bred;
-        }
+  }
+  .btn.add-cart{
+    color: $bred;
+  }
+  .btn-notext{
+    &:hover{
+      .fa{
+        color: $bred;
       }
     }
   }
@@ -414,10 +415,25 @@ legend{
   >li{
     >a{
       border-radius: 0;
+      border: none;
       &:hover{
         background-color: #fff;
         border: none;
-        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
+
+.babycart-product{
+  .thumbnail{
+    border-radius: 0;
+    border: none;
+  }
+  .image-additional{
+    .thumbnail{
+      border: 1px solid #ddd;
+      &:hover{
+        border-color: $bred;
       }
     }
   }
