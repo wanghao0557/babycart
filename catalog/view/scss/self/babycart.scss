@@ -470,3 +470,31 @@ legend{
     border-left: none;
   }
 }
+
+.list-group{
+  a{
+    padding: 8px 7px;
+    text-shadow: none;
+  }
+  .list-group-item{
+    &:first-child, &:last-child{
+      border-radius: 0;
+    }
+    &.active, &:hover{
+      background-color: #fff;
+      span{
+        border-color: $bred;
+      }
+    }
+    &.active:hover{
+      background-color: #fff;
+    }
+    span{
+      border-left: 4px solid transparent;
+      padding: 0 5px;
+    }
+    &.sub-active{
+      color: $bred;
+    }
+  }
+}
