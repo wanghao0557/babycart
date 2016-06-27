@@ -14,12 +14,12 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
+          <legend><span><?php echo $heading_title; ?></span></legend>
           <div class="form-group">
-            <label class="col-sm-2 control-label"><?php echo $entry_newsletter; ?></label>
-            <div class="col-sm-10">
+            <label class="col-sm-4 control-label"><?php echo $entry_newsletter; ?></label>
+            <div class="col-sm-5">
               <?php if ($newsletter) { ?>
               <label class="radio-inline">
                 <input type="radio" name="newsletter" value="1" checked="checked" />
@@ -38,10 +38,9 @@
             </div>
           </div>
         </fieldset>
-        <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-          <div class="pull-right">
-            <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-5">
+            <input type="submit" value="保存" class="btn btn-lg btn-primary" />
           </div>
         </div>
       </form>

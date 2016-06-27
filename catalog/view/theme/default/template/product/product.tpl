@@ -13,8 +13,8 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <div class="row">
+    <div id="babycart-product" class="babycart-product <?php echo $class; ?>"><?php echo $content_top; ?>
+      <div class="row devider20-mb">
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } elseif ($column_left || $column_right) { ?>
@@ -130,10 +130,10 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
+            <button type="button" data-toggle="tooltip" class="btn btn-default btn-notext" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
+            <button type="button" data-toggle="tooltip" class="btn btn-default btn-notext" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
           </div>
-          <h1><?php echo $heading_title; ?></h1>
+          <h3><?php echo $heading_title; ?></h3>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -155,9 +155,6 @@
             <li>
               <h2><?php echo $special; ?></h2>
             </li>
-            <?php } ?>
-            <?php if ($tax) { ?>
-            <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
             <?php } ?>
             <?php if ($points) { ?>
             <li><?php echo $text_points; ?> <?php echo $points; ?></li>
@@ -333,72 +330,84 @@
               <?php } ?>
               <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $reviews; ?></a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><?php echo $text_write; ?></a></p>
             <hr>
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
-            <!-- AddThis Button END -->
           </div>
           <?php } ?>
         </div>
       </div>
       <?php if ($products) { ?>
-      <h3><?php echo $text_related; ?></h3>
-      <div class="row">
-        <?php $i = 0; ?>
-        <?php foreach ($products as $product) { ?>
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
-        <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
-        <?php } else { ?>
-        <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
-        <?php } ?>
-        <div class="<?php echo $class; ?>">
-          <div class="product-thumb transition">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div class="caption">
-              <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-              <p><?php echo $product['description']; ?></p>
-              <?php if ($product['rating']) { ?>
-              <div class="rating">
-                <?php for ($i = 1; $i <= 5; $i++) { ?>
-                <?php if ($product['rating'] < $i) { ?>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
-                <?php } else { ?>
-                <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
-                <?php } ?>
-                <?php } ?>
-              </div>
-              <?php } ?>
-              <?php if ($product['price']) { ?>
-              <p class="price">
-                <?php if (!$product['special']) { ?>
-                <?php echo $product['price']; ?>
-                <?php } else { ?>
-                <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                <?php } ?>
-                <?php if ($product['tax']) { ?>
-                <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                <?php } ?>
-              </p>
-              <?php } ?>
-            </div>
-            <div class="button-group">
-              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-            </div>
+      <div class="babycart-group babycart-full-product">
+        <h4><?php echo $text_related; ?></h4>
+        <div class="bgroup-body">
+          <ul class="bgroup-lists row">
+            <?php $i = 0; ?>
+            <?php foreach ($products as $product) { ?>
+            <?php if ($column_left && $column_right) { ?>
+            <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
+            <?php } elseif ($column_left || $column_right) { ?>
+            <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
+            <?php } else { ?>
+            <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
+            <?php } ?>
+            <li class="<?php echo $class; ?>">
+                <div class="blist-header">
+                  <a href="<?php echo $product['href']; ?>">
+                    <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['thumb']; ?>" class="img-responsive">
+                  </a>
+                </div>
+                <div class="blist-body">
+                  <h3>
+                    <a href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>"><?php  echo $product['name']; ?></a>
+                  </h3>
+                  <?php if($product['price']) { ?>
+                    <p class="price">
+                      <?php if(!$product['special']) { ?>
+                        <?php echo $product['price']; ?>
+                      <?php } else { ?>
+                        <span class="price-new"><?php echo $product['special']; ?></span>
+                        <span class="price-old"><?php echo $product['price']; ?></span>
+                      <?php } ?>
+                      <?php if($product['tax']) { ?>
+                        <span class="hide">
+                          <?php echo $text_tax; ?>
+                          <?php echo $product['tax']; ?>
+                        </span>
+                      <?php }?>
+                    </p>
+                  <?php } ?>
+                  <div class="view-for-list">
+                    <p><?php echo $product['description']; ?></p>
+                    <?php if ($product['rating']) { ?>
+                    <div class="rating">
+                      <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                      <?php } else { ?>
+                      <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                      <?php } ?>
+                      <?php } ?>
+                    </div>
+                    <?php } else { ?>
+                      <p><i>暂无评论</i></p>
+                    <?php } ?>
+                  </div>                          
+                  <div class="btn-group">
+                    <button class="btn btn-default add-cart" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-shopping-cart"></i>
+                      <?php echo $button_cart; ?>
+                    </button>
+                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-exchange"></i>
+                    </button>
+                  </div>
+                </div>
+            </li>
+            <?php $i++; ?>
+            <?php } ?>
           </div>
         </div>
-        <?php if (($column_left && $column_right) && ($i % 2 == 0)) { ?>
-        <div class="clearfix visible-md visible-sm"></div>
-        <?php } elseif (($column_left || $column_right) && ($i % 3 == 0)) { ?>
-        <div class="clearfix visible-md"></div>
-        <?php } elseif ($i % 4 == 0) { ?>
-        <div class="clearfix visible-md"></div>
-        <?php } ?>
-        <?php $i++; ?>
-        <?php } ?>
       </div>
       <?php } ?>
       <?php if ($tags) { ?>

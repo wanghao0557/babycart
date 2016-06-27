@@ -69,7 +69,7 @@
         <?php if($logged) { ?>
           <ul class="dropdown-menu">
             <li>
-              <a href="<?php echo $accout; ?>"><?php echo $text_account; ?></a>
+              <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>
             </li>
             <li>
               <a href="<?php echo $order; ?>"><?php echo $text_order; ?></a>

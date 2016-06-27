@@ -25,14 +25,7 @@ function getURLVar(key) {
 $(document).ready(function() {
 	// Adding the clear Fix
 	cols1 = $('#column-right, #column-left').length;
-	
-	if (cols1 == 2) {
-		$('#content .product-layout:nth-child(2n+2)').after('<div class="clearfix visible-md visible-sm"></div>');
-	} else if (cols1 == 1) {
-		$('#content .product-layout:nth-child(3n+3)').after('<div class="clearfix visible-lg"></div>');
-	} else {
-		$('#content .product-layout:nth-child(4n+4)').after('<div class="clearfix"></div>');
-	}
+
 	
 	// Highlight any found errors
 	$('.text-danger').each(function() {
@@ -94,16 +87,20 @@ $(document).ready(function() {
 
 	// Product List
 	$('#list-view').click(function() {
+		if($(this).hasClass('active')){return;}
 		$('#content .product-layout > .clearfix').remove();
 
 		//$('#content .product-layout').attr('class', 'product-layout product-list col-xs-12');
 		$('#content .row > .product-layout').attr('class', 'product-layout product-list col-xs-12');
+		$('.bcategory-toolbar .btn').removeClass('active');
+		$(this).addClass('active');
 		
 		localStorage.setItem('display', 'list');
 	});
 
 	// Product Grid
 	$('#grid-view').click(function() {
+		if($(this).hasClass('active')){return;}
 		$('#content .product-layout > .clearfix').remove();
 
 		// What a shame bootstrap does not take into account dynamically loaded columns
@@ -116,7 +113,8 @@ $(document).ready(function() {
 		} else {
 			$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
 		}
-
+		$('.bcategory-toolbar .btn').removeClass('active');
+		$(this).addClass('active');
 		 localStorage.setItem('display', 'grid');
 	});
 

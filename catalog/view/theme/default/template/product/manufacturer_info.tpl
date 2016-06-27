@@ -17,44 +17,45 @@
       <h2><?php echo $heading_title; ?></h2>
       <?php if ($products) { ?>
       <p><a href="<?php echo $compare; ?>" id="compare-total"> <?php echo $text_compare; ?></a></p>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="btn-group hidden-xs">
-            <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-            <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+      <div class="bcategory-toolbar">
+        <div class="row">
+          <div class="col-sm-4 hidden-xs">
+            <div class="btn-group">
+              <button class="btn btn-default" id="list-view">
+                <i title="<?php echo $button_list; ?>" class="fa fa-th-list"></i>
+              </button>
+              <button class="btn btn-default active" id="grid-view">
+                <i title="<?php echo $button_grid; ?>" class="fa fa-th"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-5 form-inline">
+            <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
+            <select id="input-sort" class="form-control" onchange="location = this.value;">
+              <?php foreach ($sorts as $sorts) { ?>
+              <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+              <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+              <?php } else { ?>
+              <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+              <?php } ?>
+              <?php } ?>
+            </select>
+          </div>
+          <div class="col-sm-3 form-inline">
+            <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
+            <select id="input-limit" class="form-control" onchange="location = this.value;">
+              <?php foreach ($limits as $limits) { ?>
+              <?php if ($limits['value'] == $limit) { ?>
+              <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
+              <?php } else { ?>
+              <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+              <?php } ?>
+              <?php } ?>
+            </select>
           </div>
         </div>
-        <div class="col-sm-1 col-sm-offset-2 text-right">
-          <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
-        </div>
-        <div class="col-sm-3 text-right">
-          <select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
-            <?php foreach ($sorts as $sorts) { ?>
-            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
-        </div>
-        <div class="col-sm-1 text-right">
-          <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
-        </div>
-        <div class="col-sm-2 text-right">
-          <select id="input-limit" class="form-control" onchange="location = this.value;">
-            <?php foreach ($limits as $limits) { ?>
-            <?php if ($limits['value'] == $limit) { ?>
-            <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
-        </div>
       </div>
-      <br />
-      <div class="babycart-group">
+      <div class="babycart-group babycart-full-product">
         <div class="bgroup-body">
           <ul class="bgroup-lists row">
             <?php foreach($products as $product) { ?>
@@ -83,20 +84,8 @@
                         </span>
                       <?php }?>
                     </p>
-                  <?php } ?> 
-                  <div class="btn-group">
-                    <button class="btn btn-default add-cart" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');">
-                      <i class="fa fa-shopping-cart"></i>
-                      <?php echo $button_cart; ?>
-                    </button>
-                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
-                      <i class="fa fa-heart"></i>
-                    </button>
-                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
-                      <i class="fa fa-exchange"></i>
-                    </button>
-                  </div>
-                  <div class="hide">
+                  <?php } ?>
+                  <div class="view-for-list">
                     <p><?php echo $product['description']; ?></p>
                     <?php if ($product['rating']) { ?>
                     <div class="rating">
@@ -109,8 +98,20 @@
                       <?php } ?>
                     </div>
                     <?php } else { ?>
-                      <span>no review</span>
+                      <p><i>暂无评论</i></p>
                     <?php } ?>
+                  </div>                          
+                  <div class="btn-group">
+                    <button class="btn btn-default add-cart" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-shopping-cart"></i>
+                      <?php echo $button_cart; ?>
+                    </button>
+                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                    <button class="btn btn-default btn-notext" type="button" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');">
+                      <i class="fa fa-exchange"></i>
+                    </button>
                   </div>
                 </div>
               </li>
